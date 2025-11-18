@@ -1,15 +1,6 @@
 'use strict';
 
-// modal variables
-const modal = document.querySelector('[data-modal]');
-const modalCloseBtn = document.querySelector('[data-modal-close]');
-const modalCloseOverlay = document.querySelector('[data-modal-overlay]');
-
-if (modal && modalCloseBtn && modalCloseOverlay) {
-  const modalCloseFunc = function () { modal.classList.add('closed') }
-  modalCloseOverlay.addEventListener('click', modalCloseFunc);
-  modalCloseBtn.addEventListener('click', modalCloseFunc);
-}
+// Newsletter modal removed
 
 
 
@@ -163,18 +154,34 @@ function navigateToProductDetail(productCard) {
   window.location.href = `./pages/product-detail.html?data=${productData}`;
 }
 
-// Add trailing zero to all product prices
+// Fix product prices - ensure discount is higher than actual price
 function addZeroToProductPrices() {
-  const priceSelectors = ['.price-box .price', '.price-box del'];
-  priceSelectors.forEach(selector => {
-    document.querySelectorAll(selector).forEach(el => {
-      if (el.dataset.zeroAdjusted === 'true') return;
-      const numericValue = parseFloat(el.textContent.replace(/[^0-9.]/g, ''));
-      if (isNaN(numericValue)) return;
-      const updated = (numericValue * 10).toFixed(2);
-      el.textContent = `₹${updated}`;
-      el.dataset.zeroAdjusted = 'true';
-    });
+  document.querySelectorAll('.price-box').forEach(priceBox => {
+    if (priceBox.dataset.priceAdjusted === 'true') return;
+    
+    const priceEl = priceBox.querySelector('.price');
+    const delEl = priceBox.querySelector('del');
+    
+    if (priceEl) {
+      const priceValue = parseFloat(priceEl.textContent.replace(/[^0-9.]/g, ''));
+      if (!isNaN(priceValue)) {
+        // Multiply actual price by 10
+        const newPrice = (priceValue * 10).toFixed(2);
+        priceEl.textContent = `₹${newPrice}`;
+        
+        // Make discount price 25-35% higher than actual price
+        if (delEl) {
+          const discountValue = parseFloat(delEl.textContent.replace(/[^0-9.]/g, ''));
+          if (!isNaN(discountValue)) {
+            // Calculate discount as 25-35% markup on new price
+            const markup = 1.25 + (Math.random() * 0.1); // 25-35% markup
+            const newDiscount = (parseFloat(newPrice) * markup).toFixed(2);
+            delEl.textContent = `₹${newDiscount}`;
+          }
+        }
+      }
+    }
+    priceBox.dataset.priceAdjusted = 'true';
   });
 }
 

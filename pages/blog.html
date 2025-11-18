@@ -4,12 +4,63 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Groots</title>
+  <title>Blog - Groots</title>
   <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../assets/css/style-prefix.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .blog-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+    .blog-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .blog-content {
+      padding: 20px;
+    }
+    .blog-date {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .blog-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .blog-excerpt {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .blog-link {
+      color: #e91e63;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
   <div class="overlay" data-overlay></div>
@@ -26,7 +77,6 @@
           <p><b>Free Shipping</b> This Week Order Over - ₹55</p>
         </div>
         <div class="header-top-actions">
-         
         </div>
       </div>
     </div>
@@ -56,20 +106,50 @@
     </div>
   </header>
   <main>
-    <div class="container" style="padding: 40px 20px;">
-      <h1 class="title" style="margin-bottom: 30px;">Contact Us</h1>
-      <div style="max-width: 800px; line-height: 1.8; font-size: 16px;">
-        <p><strong>We're Here to Help You</strong></p>
-        <p style="margin-top: 20px;">Have a question, concern, or feedback? Our customer support team is ready to assist you. We're committed to providing exceptional service and ensuring your complete satisfaction.</p>
-        <p style="margin-top: 20px;"><strong>Get in Touch:</strong></p>
-        <ul style="margin-top: 10px; padding-left: 20px;">
-          <li><strong>Email:</strong> support@groots.com</li>
-          <li><strong>Phone:</strong> (607) 936-8058 (Mon-Sat, 9 AM - 6 PM)</li>
-          <li><strong>Address:</strong> 419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</li>
-          <li><strong>Live Chat:</strong> Available on our website (24/7)</li>
-        </ul>
-        <p style="margin-top: 20px;"><strong>Response Time:</strong></p>
-        <p style="margin-top: 10px;">We aim to respond to all inquiries within 24 hours. For urgent matters, please call our customer service hotline.</p>
+    <div class="container">
+      <div class="blog-container">
+        <h1 class="title" style="margin-bottom: 30px;">Blog</h1>
+        <p style="max-width: 800px; line-height: 1.8; font-size: 16px; margin-bottom: 30px; color: #666;">
+          Stay updated with the latest fashion trends, shopping tips, product reviews, and lifestyle articles from Groots.
+        </p>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <img src="../assets/images/blog-1.jpg" alt="Fashion Trends 2024" class="blog-image">
+            <div class="blog-content">
+              <p class="blog-date">January 15, 2024</p>
+              <h3 class="blog-title">Top Fashion Trends for 2024</h3>
+              <p class="blog-excerpt">Discover the hottest fashion trends that will dominate 2024. From sustainable fashion to bold colors, explore what's in style this year.</p>
+              <a href="#" class="blog-link">Read More →</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <img src="../assets/images/blog-2.jpg" alt="Shopping Tips" class="blog-image">
+            <div class="blog-content">
+              <p class="blog-date">January 10, 2024</p>
+              <h3 class="blog-title">Smart Shopping Tips for Online Shoppers</h3>
+              <p class="blog-excerpt">Learn how to shop smarter online with our expert tips on finding the best deals, reading reviews, and making informed purchases.</p>
+              <a href="#" class="blog-link">Read More →</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <img src="../assets/images/blog-3.jpg" alt="Product Care" class="blog-image">
+            <div class="blog-content">
+              <p class="blog-date">January 5, 2024</p>
+              <h3 class="blog-title">How to Care for Your Clothes</h3>
+              <p class="blog-excerpt">Extend the life of your wardrobe with proper care techniques. Learn washing, storage, and maintenance tips for different fabrics.</p>
+              <a href="#" class="blog-link">Read More →</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <img src="../assets/images/blog-4.jpg" alt="Beauty Tips" class="blog-image">
+            <div class="blog-content">
+              <p class="blog-date">December 28, 2023</p>
+              <h3 class="blog-title">Beauty Essentials for Every Season</h3>
+              <p class="blog-excerpt">Build the perfect beauty routine with seasonal essentials. From skincare to makeup, find products that work for every time of year.</p>
+              <a href="#" class="blog-link">Read More →</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -112,3 +192,4 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+

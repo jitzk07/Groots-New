@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Offers - Groots</title>
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/style-prefix.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .offers-banner {
+      background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .offers-banner h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .offers-banner p {
+      font-size: 20px;
+      opacity: 0.9;
+    }
+    .offers-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .offer-section {
+      margin-bottom: 50px;
+    }
+    .offer-section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .offer-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border: 2px solid #e91e63;
+    }
+    .offer-badge {
+      background: #e91e63;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    .offer-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .offer-desc {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .offer-link {
+      color: #e91e63;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" data-overlay></div>
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <div class="header-alert-news">
+          <p><b>Free Shipping</b> This Week Order Over - ₹55</p>
+        </div>
+        <div class="header-top-actions">
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <a href="../index.html" class="header-logo">
+          <img src="../assets/images/logo/logo.svg" alt="Groots's logo" width="120" height="36">
+        </a>
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+        </div>
+        <div class="header-user-actions">
+          <button class="action-btn" onclick="window.location.href='login.html'">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <button class="action-btn" onclick="window.location.href='cart.html'">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="offers-banner">
+      <h1>🔥 Hot Offers</h1>
+      <p>Limited Time Deals - Don't Miss Out!</p>
+    </div>
+    <div class="container">
+      <div class="offers-container">
+        <div class="offer-section">
+          <h2>Flash Sales</h2>
+          <div class="offer-grid">
+            <div class="offer-card">
+              <span class="offer-badge">70% OFF</span>
+              <h3 class="offer-title">Electronics Mega Sale</h3>
+              <p class="offer-desc">Get up to 70% off on selected electronics including smartphones, laptops, and accessories. Limited stock available.</p>
+              <a href="./electronic.html" class="offer-link">Shop Now →</a>
+            </div>
+            <div class="offer-card">
+              <span class="offer-badge">50% OFF</span>
+              <h3 class="offer-title">Fashion Clearance</h3>
+              <p class="offer-desc">Massive discounts on fashion items. Clear your wardrobe and upgrade your style at unbeatable prices.</p>
+              <a href="./fashion.html" class="offer-link">Shop Now →</a>
+            </div>
+            <div class="offer-card">
+              <span class="offer-badge">BUY 2 GET 1</span>
+              <h3 class="offer-title">Cosmetics Special</h3>
+              <p class="offer-desc">Buy any 2 cosmetic products and get 1 free. Perfect opportunity to stock up on your beauty essentials.</p>
+              <a href="./cosmetics.html" class="offer-link">Shop Now →</a>
+            </div>
+          </div>
+        </div>
+        <div class="offer-section">
+          <h2>Seasonal Offers</h2>
+          <div class="offer-grid">
+            <div class="offer-card">
+              <span class="offer-badge">FREE SHIPPING</span>
+              <h3 class="offer-title">Orders Over ₹55</h3>
+              <p class="offer-desc">Enjoy free standard shipping on all orders above ₹55. No coupon code needed - automatically applied at checkout.</p>
+              <a href="../index.html" class="offer-link">Start Shopping →</a>
+            </div>
+            <div class="offer-card">
+              <span class="offer-badge">NEW ARRIVALS</span>
+              <h3 class="offer-title">Early Bird Discount</h3>
+              <p class="offer-desc">Be among the first to shop our new arrivals and get 20% off. Valid for the first 100 customers only.</p>
+              <a href="./new-products.html" class="offer-link">Shop Now →</a>
+            </div>
+            <div class="offer-card">
+              <span class="offer-badge">WEEKEND SALE</span>
+              <h3 class="offer-title">Weekend Special</h3>
+              <p class="offer-desc">Every weekend, enjoy special discounts on selected categories. Check back every Friday for new deals.</p>
+              <a href="./prices-drop.html" class="offer-link">View Deals →</a>
+            </div>
+          </div>
+        </div>
+        <div class="offer-section">
+          <h2>Member Exclusive</h2>
+          <div class="offer-grid">
+            <div class="offer-card">
+              <span class="offer-badge">VIP ACCESS</span>
+              <h3 class="offer-title">Register & Save</h3>
+              <p class="offer-desc">Create an account and get 10% off on your first order. Plus, enjoy exclusive member-only deals throughout the year.</p>
+              <a href="./register.html" class="offer-link">Register Now →</a>
+            </div>
+            <div class="offer-card">
+              <span class="offer-badge">REFERRAL BONUS</span>
+              <h3 class="offer-title">Refer & Earn</h3>
+              <p class="offer-desc">Refer a friend and both of you get ₹100 off on your next purchase. Share the love and save together!</p>
+              <a href="./contact-us.html" class="offer-link">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-nav">
+      <div class="container">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <address class="content">419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</address>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <img src="../assets/images/payment.png" alt="payment method" class="payment-img">
+        <p class="copyright">Copyright &copy; <a href="#">Groots</a> all rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/script.js"></script>
+  <script>
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+    updateCartCount();
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
