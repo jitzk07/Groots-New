@@ -5,11 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Headphone - Groots</title>
-  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../pages/Groots logo.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="../assets/css/style-prefix.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .product-grid .showcase {
+      display: flex;
+      flex-direction: column;
+    }
+    .product-grid .showcase-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 15px 20px 20px;
+    }
+    .product-grid .view-product-btn {
+      margin-top: auto;
+      margin-bottom: 0;
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid var(--salmon-pink);
+      color: var(--salmon-pink);
+      background: transparent;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .product-grid .view-product-btn:hover {
+      background: var(--salmon-pink);
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="overlay" data-overlay></div>
@@ -32,7 +62,7 @@
     <div class="header-main">
       <div class="container">
         <a href="../index.html" class="header-logo">
-          <img src="../assets/images/logo/logo.svg" alt="Groots's logo" width="120" height="36">
+          <img src="../pages/Groots logo.jpeg" alt="Groots's logo" width="120" height="36">
         </a>
         <div class="header-search-container">
           <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
@@ -62,8 +92,8 @@
           
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop" alt="Wireless Headphones" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop" alt="Wireless Headphones" class="product-img hover" width="300">
+              <img src="/pages/Wireless bluetooth headphones.jpg" alt="Wireless Headphones" class="product-img default" width="300">
+              <img src="/pages/Wireless bluetooth headphones.jpg" alt="Wireless Headphones" class="product-img hover" width="300">
               <p class="showcase-badge">25%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -80,15 +110,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹8,500.00</p>
-                <del>₹12,000.00</del>
+                <del>₹110,697.12</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop" alt="Gaming Headphones" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop" alt="Gaming Headphones" class="product-img hover" width="300">
+              <img src="/pages/Gaming Headphones.webp" alt="Gaming Headphones" class="product-img default" width="300">
+              <img src="/pages/Gaming Headphones.webp" alt="Gaming Headphones" class="product-img hover" width="300">
               <p class="showcase-badge angle pink">new</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -105,15 +136,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹6,500.00</p>
-                <del>₹9,000.00</del>
+                <del>₹82,913.13</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop" alt="Studio Headphones" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop" alt="Studio Headphones" class="product-img hover" width="300">
+              <img src="/pages/Studio Headphones.jpg" alt="Studio Headphones" class="product-img default" width="300">
+              <img src="/pages/Studio Headphones.jpg" alt="Studio Headphones" class="product-img hover" width="300">
               <p class="showcase-badge angle black">sale</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -130,15 +162,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹12,000.00</p>
-                <del>₹16,000.00</del>
+                <del>₹158,177.02</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop" alt="Sports Headphones" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop" alt="Sports Headphones" class="product-img hover" width="300">
+              <img src="/pages/bluetooth earbuds.webp" alt="Sports Headphones" class="product-img default" width="300">
+              <img src="/pages/bluetooth earbuds.webp" alt="Sports Headphones" class="product-img hover" width="300">
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
                 <button class="btn-action"><ion-icon name="eye-outline"></ion-icon></button>
@@ -154,15 +187,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹3,500.00</p>
-                <del>₹5,000.00</del>
+                <del>₹44,695.16</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop" alt="Budget Headphones" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop" alt="Budget Headphones" class="product-img hover" width="300">
+              <img src="/pages/Wired headphones.jpg" alt="Budget Headphones" class="product-img default" width="300">
+              <img src="/pages/Wired headphones.jpg" alt="Budget Headphones" class="product-img hover" width="300">
               <p class="showcase-badge">30%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -179,15 +213,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹1,200.00</p>
-                <del>₹2,000.00</del>
+                <del>₹15,700.30</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop" alt="True Wireless Earbuds" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop" alt="True Wireless Earbuds" class="product-img hover" width="300">
+              <img src="/pages/Wireless earbuds.jpg" alt="True Wireless Earbuds" class="product-img default" width="300">
+              <img src="/pages/Wireless earbuds.jpg" alt="True Wireless Earbuds" class="product-img hover" width="300">
               <p class="showcase-badge angle black">sale</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -204,8 +239,9 @@
               </div>
               <div class="price-box">
                 <p class="price">₹4,500.00</p>
-                <del>₹6,500.00</del>
+                <del>₹58,845.25</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
@@ -244,9 +280,50 @@
   <script>
     function updateCartCount() {
       const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-      document.getElementById('cart-count').textContent = cart.length;
+      const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      document.getElementById('cart-count').textContent = totalItems;
     }
-    updateCartCount();
+    
+    // Map product titles to their detail page URLs
+    const productPageMap = {
+      'Wireless Bluetooth Headphones - Noise Cancelling': 'product-wireless-headphones.html',
+      'Gaming Headphones - 7.1 Surround Sound': 'product-gaming-headphones.html',
+      'Studio Monitor Headphones - Professional': 'product-studio-headphones.html',
+      'Sports Wireless Earbuds - Sweatproof': 'product-sports-earbuds.html',
+      'Budget Wired Headphones - Over-Ear': 'product-budget-headphones.html',
+      'True Wireless Earbuds - AirPods Style': 'product-true-wireless-earbuds.html'
+    };
+    
+    // Function to link View Product buttons to correct pages
+    function linkViewProductButtons() {
+      document.querySelectorAll('.view-product-btn').forEach(btn => {
+        // Find the product title in the same showcase
+        const showcase = btn.closest('.showcase');
+        if (showcase) {
+          const titleElement = showcase.querySelector('.showcase-title');
+          if (titleElement) {
+            const productTitle = titleElement.textContent.trim();
+            const pageUrl = productPageMap[productTitle];
+            if (pageUrl) {
+              btn.onclick = function() {
+                window.location.href = pageUrl;
+              };
+            }
+          }
+        }
+      });
+    }
+    
+    // Wait for DOM to be ready, then link buttons
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(linkViewProductButtons, 200);
+        updateCartCount();
+      });
+    } else {
+      setTimeout(linkViewProductButtons, 200);
+      updateCartCount();
+    }
   </script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

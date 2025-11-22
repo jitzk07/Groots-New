@@ -101,12 +101,91 @@ function addToCart(product) {
 
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
   const countElements = document.querySelectorAll('.count');
   countElements.forEach(el => {
     if (el.closest('.action-btn') && el.closest('.action-btn').querySelector('ion-icon[name="bag-handle-outline"]')) {
-      el.textContent = cart.length;
+      el.textContent = totalItems;
     }
   });
+}
+
+// Wishlist functionality
+function addToWishlist(product) {
+  let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+  
+  // Check if product already in wishlist
+  const existingItem = wishlist.find(item => item.id === product.id);
+  if (existingItem) {
+    // Remove from wishlist if already exists
+    wishlist = wishlist.filter(item => item.id !== product.id);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    updateWishlistCount();
+    updateHeartIcons();
+    showNotification('Product removed from wishlist!');
+    return false;
+  } else {
+    wishlist.push(product);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    updateWishlistCount();
+    updateHeartIcons();
+    showNotification('Product added to wishlist!');
+    return true;
+  }
+}
+
+function removeFromWishlist(productId) {
+  let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+  wishlist = wishlist.filter(item => item.id !== productId);
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+  updateWishlistCount();
+  updateHeartIcons();
+}
+
+function updateWishlistCount() {
+  const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+  const countElements = document.querySelectorAll('#wishlist-count, .count');
+  countElements.forEach(el => {
+    const actionBtn = el.closest('.action-btn');
+    if (actionBtn && (actionBtn.querySelector('ion-icon[name="heart-outline"]') || actionBtn.querySelector('ion-icon[name="heart"]'))) {
+      el.textContent = wishlist.length;
+    }
+  });
+}
+
+function updateHeartIcons() {
+  const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+  const wishlistIds = wishlist.map(item => item.id);
+  
+  document.querySelectorAll('.showcase').forEach(showcase => {
+    const heartBtn = showcase.querySelector('ion-icon[name="heart-outline"]');
+    if (heartBtn) {
+      const productCard = showcase;
+      const productName = productCard.querySelector('.showcase-title')?.textContent?.trim() || '';
+      const productPrice = productCard.querySelector('.price')?.textContent?.trim() || '₹0.00';
+      const productImage = productCard.querySelector('img')?.src || '';
+      const productCategory = productCard.querySelector('.showcase-category')?.textContent?.trim() || '';
+      
+      // Create a simple ID based on product name and price
+      const productId = `${productName}_${productPrice}`;
+      
+      if (wishlistIds.includes(productId)) {
+        heartBtn.setAttribute('name', 'heart');
+        heartBtn.style.color = '#e91e63';
+      } else {
+        heartBtn.setAttribute('name', 'heart-outline');
+        heartBtn.style.color = '';
+      }
+    }
+  });
+}
+
+function isProductInWishlist(productCard) {
+  const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+  const productName = productCard.querySelector('.showcase-title')?.textContent?.trim() || '';
+  const productPrice = productCard.querySelector('.price')?.textContent?.trim() || '₹0.00';
+  const productId = `${productName}_${productPrice}`;
+  return wishlist.some(item => item.id === productId);
 }
 
 function showNotification(message) {
@@ -124,6 +203,8 @@ function showNotification(message) {
 // Initialize UI helpers on page load
 function onDomReady() {
   updateCartCount();
+  updateWishlistCount();
+  updateHeartIcons();
   addZeroToProductPrices();
   injectViewProductButtons();
 }
@@ -151,7 +232,10 @@ function navigateToProductDetail(productCard) {
   };
   
   const productData = encodeURIComponent(JSON.stringify(product));
-  window.location.href = `./pages/product-detail.html?data=${productData}`;
+  // Determine correct path based on current location
+  const isInPagesDir = window.location.pathname.includes('/pages/');
+  const detailPagePath = isInPagesDir ? 'product-detail.html' : 'pages/product-detail.html';
+  window.location.href = `${detailPagePath}?data=${productData}`;
 }
 
 // Fix product prices - ensure discount is higher than actual price
@@ -244,10 +328,42 @@ document.addEventListener('click', function(e) {
   // Handle product detail navigation - dedicated button
   if (e.target.closest('[data-view-product]')) {
     const button = e.target.closest('[data-view-product]');
+    // Skip if button already has a custom onclick handler
+    if (button.onclick) {
+      return; // Let the custom handler take over
+    }
     const productCard = button.closest('.showcase');
     if (productCard) {
       e.preventDefault();
       navigateToProductDetail(productCard);
+    }
+  }
+  
+  // Handle wishlist - heart icon
+  if (e.target.closest('ion-icon[name="heart-outline"]') || e.target.closest('ion-icon[name="heart"]')) {
+    const heartIcon = e.target.closest('ion-icon[name="heart-outline"]') || e.target.closest('ion-icon[name="heart"]');
+    const btn = heartIcon.closest('button');
+    const productCard = btn.closest('.showcase');
+    
+    if (productCard) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const product = {
+        id: `${productCard.querySelector('.showcase-title')?.textContent?.trim() || 'Product'}_${productCard.querySelector('.price')?.textContent?.trim() || '₹0.00'}`,
+        name: productCard.querySelector('.showcase-title')?.textContent?.trim() || 'Product',
+        price: productCard.querySelector('.price')?.textContent?.trim() || '₹0.00',
+        oldPrice: productCard.querySelector('del')?.textContent?.trim() || '',
+        image: productCard.querySelector('img')?.src || '',
+        images: [
+          productCard.querySelector('img.default')?.src || productCard.querySelector('img')?.src || '',
+          productCard.querySelector('img.hover')?.src || productCard.querySelector('img')?.src || ''
+        ].filter(Boolean),
+        category: productCard.querySelector('.showcase-category')?.textContent?.trim() || '',
+        description: productCard.querySelector('.showcase-desc')?.textContent?.trim() || ''
+      };
+      
+      addToWishlist(product);
     }
   }
 });

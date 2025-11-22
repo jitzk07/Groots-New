@@ -5,11 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laptop - Groots</title>
-  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../pages/Groots logo.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="../assets/css/style-prefix.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .product-grid .showcase {
+      display: flex;
+      flex-direction: column;
+    }
+    .product-grid .showcase-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 15px 20px 20px;
+    }
+    .product-grid .view-product-btn {
+      margin-top: auto;
+      margin-bottom: 0;
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid var(--salmon-pink);
+      color: var(--salmon-pink);
+      background: transparent;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .product-grid .view-product-btn:hover {
+      background: var(--salmon-pink);
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="overlay" data-overlay></div>
@@ -32,7 +62,7 @@
     <div class="header-main">
       <div class="container">
         <a href="../index.html" class="header-logo">
-          <img src="../assets/images/logo/logo.svg" alt="Groots's logo" width="120" height="36">
+          <img src="../pages/Groots logo.jpeg" alt="Groots's logo" width="120" height="36">
         </a>
         <div class="header-search-container">
           <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
@@ -62,8 +92,8 @@
           
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=500&fit=crop" alt="Gaming Laptop" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500&h=500&fit=crop" alt="Gaming Laptop" class="product-img hover" width="300">
+              <img src="/pages/Gaming Laptop.jpeg" alt="Gaming Laptop" class="product-img default" width="300">
+              <img src="/pages/Gaming Laptop.jpeg" alt="Gaming Laptop" class="product-img hover" width="300">
               <p class="showcase-badge">25%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -80,15 +110,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹95,000.00</p>
-                <del>₹1,15,000.00</del>
+                <del>₹1,190,992.73</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&h=500&fit=crop" alt="Business Laptop" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=500&h=500&fit=crop" alt="Business Laptop" class="product-img hover" width="300">
+              <img src="/pages/Business Laptop.jpg" alt="Business Laptop" class="product-img default" width="300">
+              <img src="/pages/Business Laptop.jpg" alt="Business Laptop" class="product-img hover" width="300">
               <p class="showcase-badge angle black">sale</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -105,15 +136,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹65,000.00</p>
-                <del>₹75,000.00</del>
+                <del>₹877,025.05</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&h=500&fit=crop" alt="Ultrabook" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=500&fit=crop" alt="Ultrabook" class="product-img hover" width="300">
+              <img src="/pages/Ultrabook.jpeg" alt="Ultrabook" class="product-img default" width="300">
+              <img src="/pages/Ultrabook.jpeg" alt="Ultrabook" class="product-img hover" width="300">
               <p class="showcase-badge angle pink">new</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -130,15 +162,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹55,000.00</p>
-                <del>₹65,000.00</del>
+                <del>₹712,156.06</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=500&fit=crop" alt="Student Laptop" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop" alt="Student Laptop" class="product-img hover" width="300">
+              <img src="/pages/Student Laptop.jpeg" alt="Student Laptop" class="product-img default" width="300">
+              <img src="/pages/Student Laptop.jpeg" alt="Student Laptop" class="product-img hover" width="300">
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
                 <button class="btn-action"><ion-icon name="eye-outline"></ion-icon></button>
@@ -154,15 +187,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹38,000.00</p>
-                <del>₹45,000.00</del>
+                <del>₹506,244.91</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&h=500&fit=crop" alt="2-in-1 Laptop" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500&h=500&fit=crop" alt="2-in-1 Laptop" class="product-img hover" width="300">
+              <img src="/pages/Convertible laptop.jpg" alt="2-in-1 Laptop" class="product-img default" width="300">
+              <img src="/pages/Convertible laptop.jpg" alt="2-in-1 Laptop" class="product-img hover" width="300">
               <p class="showcase-badge">18%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -179,15 +213,16 @@
               </div>
               <div class="price-box">
                 <p class="price">₹72,000.00</p>
-                <del>₹85,000.00</del>
+                <del>₹960,628.67</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=500&fit=crop" alt="Budget Laptop" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500&h=500&fit=crop" alt="Budget Laptop" class="product-img hover" width="300">
+              <img src="/pages/Budget Laptop.jpeg" alt="Budget Laptop" class="product-img default" width="300">
+              <img src="/pages/Budget Laptop.jpeg" alt="Budget Laptop" class="product-img hover" width="300">
               <p class="showcase-badge angle black">sale</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -204,8 +239,9 @@
               </div>
               <div class="price-box">
                 <p class="price">₹28,000.00</p>
-                <del>₹35,000.00</del>
+                <del>₹360,350.72</del>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
 
@@ -244,9 +280,50 @@
   <script>
     function updateCartCount() {
       const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-      document.getElementById('cart-count').textContent = cart.length;
+      const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      document.getElementById('cart-count').textContent = totalItems;
     }
-    updateCartCount();
+    
+    // Map product titles to their detail page URLs
+    const productPageMap = {
+      'Gaming Laptop - RTX 4060, 16GB RAM': 'product-gaming-laptop.html',
+      'Business Laptop - Intel i7, 16GB RAM': 'product-business-laptop.html',
+      'Ultrabook - Thin & Light, 14 inch': 'product-ultrabook.html',
+      'Student Laptop - Intel i5, 8GB RAM': 'product-student-laptop.html',
+      '2-in-1 Convertible Laptop - Touchscreen': 'product-2in1-laptop.html',
+      'Budget Laptop - Intel i3, 4GB RAM': 'product-budget-laptop.html'
+    };
+    
+    // Function to link View Product buttons to correct pages
+    function linkViewProductButtons() {
+      document.querySelectorAll('.view-product-btn').forEach(btn => {
+        // Find the product title in the same showcase
+        const showcase = btn.closest('.showcase');
+        if (showcase) {
+          const titleElement = showcase.querySelector('.showcase-title');
+          if (titleElement) {
+            const productTitle = titleElement.textContent.trim();
+            const pageUrl = productPageMap[productTitle];
+            if (pageUrl) {
+              btn.onclick = function() {
+                window.location.href = pageUrl;
+              };
+            }
+          }
+        }
+      });
+    }
+    
+    // Wait for DOM to be ready, then link buttons
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(linkViewProductButtons, 200);
+        updateCartCount();
+      });
+    } else {
+      setTimeout(linkViewProductButtons, 200);
+      updateCartCount();
+    }
   </script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

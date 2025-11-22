@@ -5,11 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Men's Casual - Groots</title>
-  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../pages/Groots logo.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="../assets/css/style-prefix.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .product-grid .showcase {
+      display: flex;
+      flex-direction: column;
+    }
+    .product-grid .showcase-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 15px 20px 20px;
+    }
+    .product-grid .view-product-btn {
+      margin-top: auto;
+      margin-bottom: 0;
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid var(--salmon-pink);
+      color: var(--salmon-pink);
+      background: transparent;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .product-grid .view-product-btn:hover {
+      background: var(--salmon-pink);
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="overlay" data-overlay></div>
@@ -32,7 +62,7 @@
     <div class="header-main">
       <div class="container">
         <a href="../index.html" class="header-logo">
-          <img src="../assets/images/logo/logo.svg" alt="Groots's logo" width="120" height="36">
+          <img src="../pages/Groots logo.jpeg" alt="Groots's logo" width="120" height="36">
         </a>
         <div class="header-search-container">
           <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
@@ -62,8 +92,8 @@
           
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=500&h=500&fit=crop" alt="Casual T-Shirt" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop" alt="Casual T-Shirt" class="product-img hover" width="300">
+              <img src="/pages/Casual tshirt.jpg" alt="Casual T-Shirt" class="product-img default" width="300">
+              <img src="/pages/Casual tshirt.jpg" alt="Casual T-Shirt" class="product-img hover" width="300">
               <p class="showcase-badge">32%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -79,15 +109,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹650.00</p>
-                <del>₹950.00</del>
+                <p class="price">₹6.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=500&fit=crop" alt="Casual Jeans" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1614699906158-61c07b3e0c0e?w=500&h=500&fit=crop" alt="Casual Jeans" class="product-img hover" width="300">
+              <img src="/pages/Casual jeans.jpg" alt="Casual Jeans" class="product-img default" width="300">
+              <img src="/pages/Casual jeans.jpg" alt="Casual Jeans" class="product-img hover" width="300">
               <p class="showcase-badge angle black">sale</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -103,15 +133,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹1,800.00</p>
-                <del>₹2,500.00</del>
+                <p class="price">₹18.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop" alt="Casual Hoodie" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500&h=500&fit=crop" alt="Casual Hoodie" class="product-img hover" width="300">
+              <img src="/pages/Casual Hoodie.jpg" alt="Casual Hoodie" class="product-img default" width="300">
+              <img src="/pages/Casual Hoodie.jpg" alt="Casual Hoodie" class="product-img hover" width="300">
               <p class="showcase-badge angle pink">new</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -127,15 +157,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-outline"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹1,500.00</p>
-                <del>₹2,200.00</del>
+                <p class="price">₹15.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500&h=500&fit=crop" alt="Casual Sneakers" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500&h=500&fit=crop" alt="Casual Sneakers" class="product-img hover" width="300">
+              <img src="/pages/Casual Sneakers.jpeg" alt="Casual Sneakers" class="product-img default" width="300">
+              <img src="/pages/Casual Sneakers.jpeg" alt="Casual Sneakers" class="product-img hover" width="300">
               <p class="showcase-badge">34%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -151,15 +181,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹2,500.00</p>
-                <del>₹3,800.00</del>
+                <p class="price">₹10.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&h=500&fit=crop" alt="Casual Shorts" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&h=500&fit=crop" alt="Casual Shorts" class="product-img hover" width="300">
+              <img src="/pages/Casual Shorts.webp" alt="Casual Shorts" class="product-img default" width="300">
+              <img src="/pages/Casual Shorts.webp" alt="Casual Shorts" class="product-img hover" width="300">
               <p class="showcase-badge angle black">sale</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -175,15 +205,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-outline"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹850.00</p>
-                <del>₹1,300.00</del>
+                <p class="price">₹8.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=500&fit=crop" alt="Casual Cap" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=500&h=500&fit=crop" alt="Casual Cap" class="product-img hover" width="300">
+              <img src="/pages/Casual cap.webp" alt="Casual Cap" class="product-img default" width="300">
+              <img src="/pages/Casual cap.webp" alt="Casual Cap" class="product-img hover" width="300">
               <p class="showcase-badge">40%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -199,9 +229,9 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-outline"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹450.00</p>
-                <del>₹750.00</del>
+                <p class="price">₹4.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
         </div>
@@ -239,9 +269,50 @@
   <script>
     function updateCartCount() {
       const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-      document.getElementById('cart-count').textContent = cart.length;
+      const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      document.getElementById('cart-count').textContent = totalItems;
     }
-    updateCartCount();
+    
+    // Map product titles to their detail page URLs
+    const productPageMap = {
+      'Casual T-Shirt': 'product-casual-tshirt.html',
+      'Casual Jeans': 'product-casual-jeans.html',
+      'Casual Hoodie': 'product-casual-hoodie.html',
+      'Casual Sneakers': 'product-casual-sneakers.html',
+      'Casual Shorts': 'product-casual-shorts.html',
+      'Casual Cap': 'product-casual-cap.html'
+    };
+    
+    // Function to link View Product buttons to correct pages
+    function linkViewProductButtons() {
+      document.querySelectorAll('.view-product-btn').forEach(btn => {
+        // Find the product title in the same showcase
+        const showcase = btn.closest('.showcase');
+        if (showcase) {
+          const titleElement = showcase.querySelector('.showcase-title');
+          if (titleElement) {
+            const productTitle = titleElement.textContent.trim();
+            const pageUrl = productPageMap[productTitle];
+            if (pageUrl) {
+              btn.onclick = function() {
+                window.location.href = pageUrl;
+              };
+            }
+          }
+        }
+      });
+    }
+    
+    // Wait for DOM to be ready, then link buttons
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(linkViewProductButtons, 200);
+        updateCartCount();
+      });
+    } else {
+      setTimeout(linkViewProductButtons, 200);
+      updateCartCount();
+    }
   </script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

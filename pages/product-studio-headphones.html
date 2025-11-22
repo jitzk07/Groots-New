@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Monitor Headphones - Groots</title>
+  <link rel="shortcut icon" href="../pages/Groots logo.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/style-prefix.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .product-detail-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .product-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .product-images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .product-main-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .product-thumbnails {
+      display: flex;
+      gap: 10px;
+    }
+    .product-thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .product-thumbnail.active {
+      border-color: #e91e63;
+    }
+    .product-info h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .product-price {
+      font-size: 28px;
+      color: #e91e63;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .product-price del {
+      font-size: 20px;
+      color: #999;
+      margin-left: 10px;
+    }
+    .product-description {
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    .product-features {
+      margin-bottom: 30px;
+    }
+    .product-features h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .product-features ul {
+      list-style: none;
+      padding: 0;
+    }
+    .product-features li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .product-features li:before {
+      content: "✓ ";
+      color: #4CAF50;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .product-actions {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .quantity-selector button {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: #f5f5f5;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .quantity-selector button:hover {
+      background: #e0e0e0;
+    }
+    .quantity-selector input {
+      width: 60px;
+      text-align: center;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .add-to-cart-btn {
+      flex: 1;
+      padding: 15px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .add-to-cart-btn:hover {
+      background: #c2185b;
+    }
+    @media (max-width: 768px) {
+      .product-detail {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" data-overlay></div>
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <div class="header-alert-news">
+          <p><b>Free Shipping</b> This Week Order Over - ₹55</p>
+        </div>
+        <div class="header-top-actions"></div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <a href="../index.html" class="header-logo">
+          <img src="../pages/Groots logo.jpeg" alt="Groots's logo" width="120" height="36">
+        </a>
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+        </div>
+        <div class="header-user-actions">
+          <button class="action-btn" onclick="window.location.href='login.html'">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <button class="action-btn" onclick="window.location.href='cart.html'">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="product-detail-container">
+        <div class="product-detail">
+          <div class="product-images">
+            <img src="/pages/Studio Headphones.jpg" alt="Studio Monitor Headphones" class="product-main-image" id="main-image">
+            <div class="product-thumbnails">
+              <img src="/pages/Studio Headphones.jpg" alt="Thumbnail 1" class="product-thumbnail active" onclick="changeImage('/pages/Studio Headphones.jpg', this)">
+              <img src="/pages/Studio Headphones.jpg" alt="Thumbnail 2" class="product-thumbnail" onclick="changeImage('/pages/Studio Headphones.jpg', this)">
+            </div>
+          </div>
+          <div class="product-info">
+            <h1>Studio Monitor Headphones - Professional</h1>
+            <div class="product-rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <span>(5.0)</span>
+            </div>
+            <div class="product-price">
+              ₹12,000.00
+              <del>₹158,177.02</del>
+            </div>
+            <div class="product-description">
+              <p>Professional studio monitor headphones designed for audio engineers, producers, and musicians. These headphones deliver flat, accurate frequency response for critical listening and mixing tasks.</p>
+              <p>Built for professional use in recording studios, these headphones provide exceptional clarity and detail. The closed-back design offers excellent isolation, allowing you to hear every nuance of your audio without external interference.</p>
+            </div>
+            <div class="product-features">
+              <h3>Key Features:</h3>
+              <ul>
+                <li>Flat Frequency Response</li>
+                <li>Closed-Back Design</li>
+                <li>Professional Build Quality</li>
+                <li>Excellent Sound Isolation</li>
+                <li>Comfortable for Long Sessions</li>
+                <li>Detachable Cable</li>
+                <li>Studio-Grade Audio Quality</li>
+              </ul>
+            </div>
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button onclick="changeQuantity(-1)">-</button>
+                <input type="number" value="1" min="1" id="quantity">
+                <button onclick="changeQuantity(1)">+</button>
+              </div>
+              <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-nav">
+      <div class="container">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <address class="content">419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</address>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <img src="../assets/images/payment.png" alt="payment method" class="payment-img">
+        <p class="copyright">Copyright &copy; <a href="#">Groots</a> all rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function changeImage(imgSrc, thumbnail) {
+      document.getElementById('main-image').src = imgSrc;
+      document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
+      thumbnail.classList.add('active');
+    }
+    
+    function changeQuantity(change) {
+      const input = document.getElementById('quantity');
+      const newValue = Math.max(1, parseInt(input.value) + change);
+      input.value = newValue;
+    }
+    
+    function addToCart() {
+      const quantity = parseInt(document.getElementById('quantity').value) || 1;
+      const product = {
+        id: 'studio-headphones',
+        name: 'Studio Monitor Headphones - Professional',
+        price: '₹1,200.00',
+        image: '/pages/Studio Headphones.jpg',
+        category: 'Studio',
+        quantity: quantity
+      };
+      
+      let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const existingItem = cart.find(item => item.id === product.id);
+      
+      if (existingItem) {
+        existingItem.quantity += quantity;
+      } else {
+        cart.push(product);
+      }
+      
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert('Product added to cart!');
+      updateCartCount();
+    }
+    
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      document.getElementById('cart-count').textContent = totalItems;
+    }
+    
+    updateCartCount();
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

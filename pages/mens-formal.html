@@ -5,11 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Men's Formal - Groots</title>
-  <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../pages/Groots logo.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="../assets/css/style-prefix.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .product-grid .showcase {
+      display: flex;
+      flex-direction: column;
+    }
+    .product-grid .showcase-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 15px 20px 20px;
+    }
+    .product-grid .view-product-btn {
+      margin-top: auto;
+      margin-bottom: 0;
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid var(--salmon-pink);
+      color: var(--salmon-pink);
+      background: transparent;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .product-grid .view-product-btn:hover {
+      background: var(--salmon-pink);
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="overlay" data-overlay></div>
@@ -32,7 +62,7 @@
     <div class="header-main">
       <div class="container">
         <a href="../index.html" class="header-logo">
-          <img src="../assets/images/logo/logo.svg" alt="Groots's logo" width="120" height="36">
+          <img src="../pages/Groots logo.jpeg" alt="Groots's logo" width="120" height="36">
         </a>
         <div class="header-search-container">
           <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
@@ -62,8 +92,8 @@
           
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e1af?w=500&h=500&fit=crop" alt="Formal Shirt - White" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=500&h=500&fit=crop" alt="Formal Shirt - White" class="product-img hover" width="300">
+              <img src="/pages/fromal white shirt.jpg" alt="Formal Shirt - White" class="product-img default" width="300">
+              <img src="/pages/fromal white shirt.jpg" alt="Formal Shirt - White" class="product-img hover" width="300">
               <p class="showcase-badge">32%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -79,15 +109,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹1,500.00</p>
-                <del>₹2,200.00</del>
+                <p class="price">₹15.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500&h=500&fit=crop" alt="Formal Trousers" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=500&fit=crop" alt="Formal Trousers" class="product-img hover" width="300">
+              <img src="/pages/formal trousers.webp" alt="Formal Trousers" class="product-img default" width="300">
+              <img src="/pages/formal trousers.webp" alt="Formal Trousers" class="product-img hover" width="300">
               <p class="showcase-badge angle black">sale</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -103,15 +133,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹2,200.00</p>
-                <del>₹3,200.00</del>
+                <p class="price">₹8.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&h=500&fit=crop" alt="Formal Blazer" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500&h=500&fit=crop" alt="Formal Blazer" class="product-img hover" width="300">
+              <img src="/pages/Formal blazers.webp" alt="Formal Blazer" class="product-img default" width="300">
+              <img src="/pages/Formal blazers.webp" alt="Formal Blazer" class="product-img hover" width="300">
               <p class="showcase-badge angle pink">new</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -127,15 +157,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹4,500.00</p>
-                <del>₹6,500.00</del>
+                <p class="price">₹15.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=500&h=500&fit=crop" alt="Formal Shoes" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop" alt="Formal Shoes" class="product-img hover" width="300">
+              <img src="/pages/Formal shoes.webp" alt="Formal Shoes" class="product-img default" width="300">
+              <img src="/pages/Formal shoes.webp" alt="Formal Shoes" class="product-img hover" width="300">
               <p class="showcase-badge">30%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -151,15 +181,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-outline"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹3,500.00</p>
-                <del>₹5,000.00</del>
+                <p class="price">₹15.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1603561596112-67a1fd81c22b?w=500&h=500&fit=crop" alt="Formal Tie Set" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500&h=500&fit=crop" alt="Formal Tie Set" class="product-img hover" width="300">
+              <img src="/pages/Formal tie.jpg" alt="Formal Tie Set" class="product-img default" width="300">
+              <img src="/pages/Formal tie.jpg" alt="Formal Tie Set" class="product-img hover" width="300">
               <p class="showcase-badge angle black">sale</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -175,15 +205,15 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹850.00</p>
-                <del>₹1,300.00</del>
+                <p class="price">₹4.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
           <div class="showcase">
             <div class="showcase-banner">
-              <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=500&h=500&fit=crop" alt="Formal Belt" class="product-img default" width="300">
-              <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=500&fit=crop" alt="Formal Belt" class="product-img hover" width="300">
+              <img src="/pages/Formal Belt.webp" alt="Formal Belt" class="product-img default" width="300">
+              <img src="/pages/Formal Belt.webp" alt="Formal Belt" class="product-img hover" width="300">
               <p class="showcase-badge">35%</p>
               <div class="showcase-actions">
                 <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
@@ -199,9 +229,9 @@
                 <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-outline"></ion-icon>
               </div>
               <div class="price-box">
-                <p class="price">₹650.00</p>
-                <del>₹1,000.00</del>
+                <p class="price">₹6.00</p>
               </div>
+              <button class="view-product-btn" data-view-product="true">View Product</button>
             </div>
           </div>
         </div>
@@ -239,9 +269,50 @@
   <script>
     function updateCartCount() {
       const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-      document.getElementById('cart-count').textContent = cart.length;
+      const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      document.getElementById('cart-count').textContent = totalItems;
     }
-    updateCartCount();
+    
+    // Map product titles to their detail page URLs
+    const productPageMap = {
+      'Formal Shirt - White': 'product-formal-shirt-white.html',
+      'Formal Trousers': 'product-formal-trousers.html',
+      'Formal Blazer': 'product-formal-blazer-formal.html',
+      'Formal Shoes': 'product-formal-shoes.html',
+      'Formal Tie Set': 'product-formal-tie-set.html',
+      'Formal Belt': 'product-formal-belt.html'
+    };
+    
+    // Function to link View Product buttons to correct pages
+    function linkViewProductButtons() {
+      document.querySelectorAll('.view-product-btn').forEach(btn => {
+        // Find the product title in the same showcase
+        const showcase = btn.closest('.showcase');
+        if (showcase) {
+          const titleElement = showcase.querySelector('.showcase-title');
+          if (titleElement) {
+            const productTitle = titleElement.textContent.trim();
+            const pageUrl = productPageMap[productTitle];
+            if (pageUrl) {
+              btn.onclick = function() {
+                window.location.href = pageUrl;
+              };
+            }
+          }
+        }
+      });
+    }
+    
+    // Wait for DOM to be ready, then link buttons
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(linkViewProductButtons, 200);
+        updateCartCount();
+      });
+    } else {
+      setTimeout(linkViewProductButtons, 200);
+      updateCartCount();
+    }
   </script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
